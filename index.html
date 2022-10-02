@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaman Tech BD - Best IT Company in Khulna, Bangladesh</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- The sidebar -->
+    <div class="sidebar-menu">
+        <a href="#"><img class="sidebar-img" src="images/logo.png" alt=""></a>
+        <div class="sidebar">
+            <ul class="menu-bar">
+                <li><a href="#new"><i class="fa fa-cart-plus"></i> New Order</a></li>
+                <li><a href="#services"><i class="fab fa-servicestack"></i> Service</a></li>
+                <li><a href="#orders"><i class="fa fa-cart-arrow-down"></i> Orders</a></li>
+                <li><a href="#funds"><i class="fa fa-funnel-dollar"></i></i> Add Funds</a></li>
+                <li><a href="#tickets"><i class="fa fa-ticket-alt"></i> Tickets</a></li>
+                <li><a href="#blance"><i class="fa fa-sack-dollar"></i> Blance</a></li>
+                <li><a href="#account"><i class="fas fa-user-alt"></i> Account</a></li>
+                <li><a href="#logout"><i class="fas fa-sign-out"></i> Logout</a></li>
+                
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div class="conainar">
+            <div class="f-group">
+                <label for="">Catagry</label>
+                <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
+                    <option value="">-- Choose Catagry --</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="instagram">Instagram</option>
+                </select>
+            </div>
+
+            <div class="f-group">
+                <label for="">Service</label>
+                <select name="slct2" id="slct2">
+                    <option value="">-- Choose Service --</option>
+                </select>
+            </div>
+            <div class="description">
+                <h2>Description</h2>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+        function populate(s1, s2) {
+            var s1 = document.getElementById(s1);
+            var s2 = document.getElementById(s2);
+            s2.innerHTML = "";
+            if (s1.value == "facebook") {
+                var optionArray = ["|", "page like|Page Like", "followers|Followers", " monetization| Monetization", " video views| Video Views"];
+            } else if (s1.value == "youtube") {
+                var optionArray = ["|", "subscribers|Subscribers", "monetization|Monetization", " watch time| Watch Time"," video views| Video Views"];
+            }else if (s1.value == "instagram") {
+                var optionArray = ["|", "followers|Followers", " video views| Video Views", " video like| Video Likes"];
+            } 
+            for (var option in optionArray) {
+                var pair = optionArray[option].split("|");
+                var newOption = document.createElement("option");
+                newOption.value = pair[0];
+                newOption.innerHTML = pair[1];
+                s2.options.add(newOption);
+            }
+        };
+        
+    </script>
+</body>
+</html>
