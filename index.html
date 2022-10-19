@@ -22,13 +22,12 @@
                 <li><a href="#tickets"><i class="fa fa-ticket-alt"></i> Tickets</a></li>
                 <li><a href="#blance"><i class="fa fa-sack-dollar"></i> Blance</a></li>
                 <li><a href="#account"><i class="fas fa-user-alt"></i> Account</a></li>
-                <li><a href="#logout"><i class="fas fa-sign-out"></i> Logout</a></li>
-                
+                <li><a href="#logout"><i class="fas fa-sign-out"></i> Logout</a></li>   
             </ul>
         </div>
     </div>
     <div class="main">
-        <div class="conainar">
+        <br class="conainar">
             <div class="f-group">
                 <label for="">Catagry</label>
                 <select name="slct1" id="slct1" onchange="populate(this.id,'slct2')">
@@ -46,14 +45,38 @@
                 </select>
             </div>
             <div class="description">
-                <h2>Description</h2>
+                <h2>Page Comment</h2>
+                <div class="des-img">
+                    <img src="images/n.webp" alt="">
+                </div>
+                <div class="des-del">
+                    <p><i class="fa fa-hand-holding-usd"></i><span>30.00</span></p>
+                    <p><i class="fas fa-hourglass-half"></i><span>  Start Time : 0-12 Hours </span></p>
+                    <p><i class="fas fa-snowboarding"></i><span> Speed : 100 Day</span></p>
+                    <p><i class="fa fa-cogs"></i><span>Guarantee : 30 Days Refill</span></p>
+                    <p><i class="fas fa-caret-down"> </i>    <span>    Drop Rate : 0%</span></p>
+                    <p><i class="fa fa-comment"></i><span>Maximum Bangladeshi Comment</span></p>
+                </div>
             </div>
-
+            <div class="link"> 
+                <h2><span>Link</span><sup><i class="fas fa-star"></i></sup>
+                <input type="text" placeholder="http//:www.facebook.com/sazib52"></h2>
+            </div>
+            <div class="quantity">
+                <span>Quantity :  </span>
+		        <input type="button" value="-" class="quantity-minus">
+                <input type="text" id="quantity_6340401ab755d" class="input-text qty text input-standard-grey" step="100" min="100" max="10000" name="quantity" value="1" title="Qty" size="4" placeholder="" inputmode="numeric" autocomplete="off">
+                <input type="button" value="+" class="quantity-plus">
+			</div>
+            <div class="charge">
+                <h2>Charge:30$</h2>
+            </div>
+            <br><br><br><br>
+            <div class="btn">
+                <button type="submit">Add to cart</button>
+            </div>
         </div>
-
-
     </div>
-
 
     <script>
         function populate(s1, s2) {
